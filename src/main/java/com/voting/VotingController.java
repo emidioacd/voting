@@ -32,7 +32,7 @@ public class VotingController {
 		return new ResponseEntity<Poll>(singletonPoll.getPoll(), HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/pooljs", method = RequestMethod.GET)
 	public String getPollJs() {
 		System.out.println("getPollJs...");
 
