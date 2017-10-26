@@ -3,7 +3,7 @@
  
 angular.module('myApp').factory('PollService', ['$http', '$q', function($http, $q){
  
-    var REST_SERVICE_URI = 'http://localhost:8080';
+    var REST_SERVICE_URI = '';
     var SERVICE = {
     		POLL : REST_SERVICE_URI+'/poll',
     		OPTION : REST_SERVICE_URI+'/poll/option'
