@@ -5,17 +5,16 @@
 
 	<groupId>com.voting</groupId>
 	<artifactId>voting</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>0.0.1</version>
 
 	<name>voting</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Voting Poll</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -25,11 +24,6 @@
 	</properties>
 
 	<dependencies>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-data-jpa</artifactId> -->
-<!-- 		</dependency> -->
-
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
@@ -42,18 +36,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -68,40 +57,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <outputDirectory>target</outputDirectory>
-              		  <warName>ROOT</warName>
-                </configuration>
-            </plugin>
-	    <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-            	<artifactId>maven-dependency-plugin</artifactId>
-            	<version>2.3</version>
-            	<executions>
-                	<execution>
-                    		<phase>package</phase>
-                    		<goals><goal>copy</goal></goals>
-                    		<configuration>
-                        		<artifactItems>
-						<artifactItem>
-							<groupId>com.github.jsimone</groupId>
-							<artifactId>webapp-runner</artifactId>
-							<version>8.5.23.0</version>
-							<destFileName>webapp-runner.jar</destFileName>
-						</artifactItem>
-                        		</artifactItems>
-                    		</configuration>
-                	</execution>
-            	</executions>
-        	</plugin>
 		</plugins>
 	</build>
-
 
 	<repositories>
 		<repository>
